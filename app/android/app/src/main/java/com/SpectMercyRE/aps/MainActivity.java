@@ -1,4 +1,4 @@
-package com.xuming.arknightspass;
+package com.SpectMercyRE.aps;
 
 import com.getcapacitor.BridgeActivity;
 

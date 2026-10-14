@@ -1,33 +1,35 @@
-# 发布说明
+# Release Notes
 
 ## v3.0.2
 
-第一个公开发布版本。
+First public release.
 
-### 本版更新
+### What's new
 
-- 修复搜索后勾选卡片「重新浮现」的问题（勾选改为增量更新，不再整表重建）
-- 点击 × 清空搜索栏后不再自动弹出输入法
-- 设置界面底部作者署名修正
-- 「关于软件」页面文案整体重写，更新日志改用新的版本号体系
+- Fixed cards popping back in when toggling one while a search or filter was active.
+- The clear (×) button in the search box no longer pulls up the keyboard.
+- Fixed some stray slashes in the author credit on the settings screen.
+- Rewrote the About page and moved the changelog to the 3.x / 2.x version scheme.
 
-### 关于这个安装包
+### About this APK
 
-- 安装包内含游戏素材（干员头像、整盒预览图、势力图标、应用图标插画），其版权归**上海鹰角网络科技有限公司**所有，**本仓库源码不含这些素材**
-- 非官方、非盈利的个人学习交流作品，**禁止任何商业用途**
-- 数据全部保存在设备本地，不联网、不上传、不收集任何信息
-- `versionCode 302`，可直接覆盖安装旧版本（v2.44 及更早）
+- Built locally by the author, so it **includes game assets** — operator avatars, box preview images, faction icons and the app icon artwork. Those belong to Shanghai Hypergryph Network Technology and are **not** part of this repository's source code.
+- Unofficial, non-commercial fan project. **Commercial use is not allowed.**
+- Everything stays on your device: no network calls, no uploads, nothing collected.
+- `versionCode 302`, application id `com.SpectMercyRE.aps`.
 
-### 安装
+  Note: if you installed a build signed with the older id `com.xuming.arknightspass`, Android will treat this one as a separate app. Your saved data won't carry over — export a backup first via Settings → Data → Export.
 
-1. 下载 `Arknights-Pass-v3.0.2.apk`（本地构建产物名为 `通行认证收集册-v3.0.2.apk`，是同一个包）
-2. 在手机上打开，按提示允许「安装未知来源应用」
-3. 安装完成后即可使用（应用完全离线，首次打开无需联网）
+### Install
 
-### 数据备份
+1. Download `Arknights-Pass-v3.0.2.apk`
+2. Open it on your phone and allow "install from unknown sources" when asked
+3. That's it — the app runs fully offline
 
-建议定期在「设置 → 数据管理 → 导出数据」保存一份 JSON 备份，换机后可通过「导入数据」恢复。
+### Backups
 
-### 完整更新日志
+Export a JSON backup from Settings → Data → Export once in a while. Import restores it on a new device.
 
-见软件内「设置 → 关于软件 → 更新日志」，共 62 条（v0.1 → v3.0.2）。
+### Full changelog
+
+See the [Changelog section](../blob/main/README.md#changelog) in the README, or Settings → About inside the app.
