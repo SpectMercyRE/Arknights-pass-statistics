@@ -1,0 +1,35 @@
+# ===== 游戏素材（版权归鹰角网络，不随仓库分发）=====
+# 本地产物照常可用，只是不入库；克隆者需自行准备，详见 README / DISCLAIMER.md
+arknights-pass/images/
+app/android/app/src/main/res/mipmap-*/ic_launcher*.png
+
+# ===== 构建产物（体积大，不入库）=====
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Capacitor / Android
+app/node_modules/
+app/android/.gradle/
+app/android/build/
+app/android/app/build/
+app/android/local.properties
+app/android/.idea/
+app/android/app/src/main/assets/public/
+app/www/
+
+# 临时文件与日志
+*.log
+_tmp*
+_check_tmp.js
+.playwright-cli/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# 工作区元数据（不属于项目本体）
+.workbuddy/

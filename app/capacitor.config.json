@@ -1,0 +1,8 @@
+{
+  "appId": "com.xuming.arknightspass",
+  "appName": "通行认证收集册",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

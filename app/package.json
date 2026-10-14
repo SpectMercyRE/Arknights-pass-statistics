@@ -1,0 +1,20 @@
+{
+  "name": "arknights-pass",
+  "version": "1.0.0",
+  "description": "明日方舟通行证收集册",
+  "private": true,
+  "scripts": {
+    "sync": "cap sync android",
+    "build:apk": "cd android && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/app": "^6.0.0",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/filesystem": "^6.0.4",
+    "@capacitor/share": "^6.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}

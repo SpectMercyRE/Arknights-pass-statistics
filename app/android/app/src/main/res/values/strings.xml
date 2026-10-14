@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">通行认证收集册</string>
+    <string name="title_activity_main">通行认证收集册</string>
+    <string name="package_name">com.xuming.arknightspass</string>
+    <string name="custom_url_scheme">com.xuming.arknightspass</string>
+</resources>
