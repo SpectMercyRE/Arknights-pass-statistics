@@ -1,20 +1,35 @@
-# 明日方舟 · 通行认证收集册
+# 明日方舟·通行认证收集册
 
 <p align="center">
   <img src="docs/screenshots/app-icon.png" width="120" alt="通行认证收集册">
 </p>
 
-一款管理《明日方舟》通行认证（干员通行证）收藏的**离线单页应用**，基于 **Capacitor** 打包为安卓客户端。
+一款管理《明日方舟》《明日方舟:终末地》通行认证收藏的**离线工具应用**，基于 **Capacitor** 打包为安卓客户端。
 
-记录每张通行证的拥有状态、市场价与购入价，自动统计收集进度与盈亏；支持按盒名 / 干员名 / 英文名 / 拼音首字母 / 星级 / 职业 / 势力搜索，包含三套配色主题（罗德岛 / 大炎 / 终末地）× 深浅模式。
+记录每张通行证的拥有状态、市场价与购入价，自动统计收集进度与盈亏  
+支持按盒名/干员名/英文名/拼音首字母/星级/职业/势力搜索  
+包含三套配色主题（罗德岛 / 大炎 / 终末地），支持深色模式
 
 > [!IMPORTANT]
-> 本仓库**不包含应用运行所需的游戏素材**（干员头像、整盒预览图、势力图标均已剥离），因为它们的版权归**上海鹰角网络科技有限公司**所有，不在本项目的 MIT 授权范围内。
-> 缺少素材时应用可正常运行，图片位置会显示「暂无图片」占位；如需完整效果，请自行准备 `arknights-pass/images/` 目录。
->
-> README 中的**界面截图**仅用于功能演示，画面内出现的游戏素材同样归鹰角所有。
+> 本仓库**不包含游戏素材**（干员头像、预览图、势力图标），版权归**上海鹰角网络科技有限公司**所有，不在本项目的 MIT 授权范围内。
+> 缺少素材时，应用会正常运行，图片位置会显示占位符，请自行准备 `arknights-pass/images/` 目录。
 >
 > 本项目为**非官方的个人学习交流作品**，禁止任何商业用途。详见 [版权与免责声明](DISCLAIMER.md)。
+
+## 下载
+
+安卓安装包见本仓库的 [Releases](../../releases/latest) 页面
+
+> [!NOTE]
+> Release 里的 APK 由本地构建，**包含游戏素材**，可直接安装使用。
+
+## 功能
+
+· 单击干员卡片即可标记 / 取消「拥有状态」  
+· 已拥有的干员，单击头像打开价格面板，可记录市场价与多条购买记录  
+· 点整盒预览图可以放大查看  
+· 单击顶部齿轮进入设置，可切换配色主题（罗德岛 / 大炎 / 终末地）与深色模式  
+· 建议定期在设置中导出数据备份，换机后可导入恢复
 
 ## 界面预览
 
@@ -60,61 +75,43 @@
 
 <p><img src="docs/screenshots/database.jpg" width="440"></p>
 
-## 功能
-
-- **收集管理**：单击卡片标记 / 取消「已拥有」；整盒集齐显示流动彩虹边框
-- **价格与盈亏**：市场价 + 多条购入记录（每条含购入价与数量），自动统计进度、官方价、市值与盈亏
-- **搜索**：盒名、干员名（中文 / 英文 / 全拼 / 拼音首字母）、星级、职业、阵营势力
-- **筛选**：已拥有 / 未拥有、系列类型（数字系列 / 音律联觉 / 嘉年华 / 联动 / 精英干员 / 终末地 / 特殊）
-- **主题**：罗德岛 / 大炎 / 终末地三套配色，每套含浅色与深色
-- **图片预览**：整盒预览图支持双指捏合缩放、拖动、双击放大还原、返回键退出
-- **数据管理**：导出 / 导入 JSON 备份，数据全部保存在设备本地
-- **动效**：勾选水波、卡片浮现、彩虹描边等
-
 ## 技术栈
 
-- 前端：纯原生 HTML / CSS / JavaScript 单文件应用（`arknights-pass/index.html`，含全部内联样式与脚本，零依赖）
-- 数据：`arknights-pass/data.js` 由 Python 脚本从 Excel 源表生成
+- 前端：HTML/CSS/JavaScript
+- 数据：`arknights-pass/data.js` 由 Python 脚本从数据源生成
 - 客户端：Capacitor 6（Android）
 - 数据生成：Python + openpyxl + Pillow + pypinyin
 
 ## 目录结构
 
 ```
-arknights-pass/          # 前端源码（唯一需要手改的地方）
-  index.html             #   单文件应用：UI + 样式 + 逻辑
-  data.js                #   自动生成：系列 / 干员 / 价格 / 势力Logo 数据
-  images/                #   ⚠️ 未包含在仓库中（版权原因），需自行准备
+arknights-pass/          # 前端源码
+  index.html             #   单文件应用
+  data.js                #   系列/干员/价格/势力Logo数据
+  images/                #   未包含在仓库中，需自行准备
 _rebuild.py              # 数据重建脚本：Excel 源表 → data.js + 图标处理
-_make_icon.py            # 应用图标生成脚本：一张源图 → 全套 Android mipmap
+_make_icon.py            # 应用图标生成脚本：源图 → Android mipmap
 build_apk.py             # 一键构建：同步 www → 调用 Gradle 打包 APK
 docs/screenshots/        # README 用的界面截图与应用图标
-app/                     # Capacitor 安卓工程（app/www 由脚本同步，勿手改）
+app/                     # Capacitor 安卓工程（app/www 由脚本同步，请勿修改）
 ```
 
 ### 素材说明
 
-`arknights-pass/images/` 需要以下子目录（自行准备，文件名与代码中的调用一致）：
+`arknights-pass/images/` 需要以下子目录（文件名与代码中的调用一致）：
 
 - `images/avatar/` — 干员头像，命名 `干员名-精一.png` / `干员名-精二.png`
 - `images/faction/` — 势力图标，命名 `势力名.png`（浅色模式）、`势力名_w.png`（深色模式）
 - `images/*.jpg` — 整盒预览图，文件名即系列名
-- `images/logo.png` — 关于页 Logo
+- `images/logo.png` — 关于页Logo
 
-缺失的图片会自动降级为「暂无图片」占位，不影响其他功能。
-
-## 下载
-
-安卓安装包见本仓库的 [Releases](../../releases/latest) 页面（当前版本 `Arknights-Pass-v3.0.2.apk`，本地构建产物的文件名是 `通行认证收集册-v3.0.2.apk`，内容相同）。
-
-> [!NOTE]
-> Release 里的 APK 由作者本地构建，**包含游戏素材**，可直接安装使用；而本仓库的源码**不含素材**（版权原因）。二者的代码完全一致。
+缺失的图片会自动显示为「暂无图片」占位，不影响其他功能。
 
 ## 构建
 
 ### 前置环境
 
-- Python 3.11+（数据重建用；依赖 `openpyxl`、`Pillow`、`pypinyin`）
+- Python 3.11+（数据重建，依赖 `openpyxl`、`Pillow`、`pypinyin`）
 - Node.js 18+
 - JDK 17（Gradle 8.2.1 不支持 Java 21+，`app/android/gradle.properties` 已固定 `org.gradle.java.home`）
 
@@ -127,17 +124,15 @@ cd app && npm install && cd ..
 # 2. 同步 Capacitor 配置与插件到安卓工程（首次构建，或改了 capacitor.config.json 之后）
 cd app && npx cap sync android && cd ..
 
-# 3. 生成应用图标（仓库未包含图标素材，首次构建必须先做这步）
-#    准备一张自己的方形图，然后：
+# 3. 生成应用图标（仓库未包含图标素材，首次构建的时候必须要做嗷）
+#    准备一张自己的icon
 python _make_icon.py <图标源图路径>
 
 # 4. 一键打包（自动同步 www 与安卓 assets，再调用 Gradle）
 python build_apk.py
 ```
 
-产物：`app/android/app/build/outputs/apk/debug/app-debug.apk`（脚本会同时复制为 `通行认证收集册-v<版本>.apk`）
-
-> 应用包名为 `com.SpectMercyRE.aps`。想改成自己的，需同步修改 `app/capacitor.config.json`、`app/android/app/build.gradle`、`app/android/app/src/main/res/values/strings.xml` 以及 `MainActivity.java` 的包声明。注意包名一经发布就别再改，否则安卓会把它当成另一个应用，老用户无法覆盖升级。
+产物：`app/android/app/build/outputs/apk/debug/app-debug.apk`（脚本会同时复制一份 `通行认证收集册-v<版本>.apk`）
 
 ### 数据更新（可选）
 
@@ -145,7 +140,7 @@ python build_apk.py
 
 ```bash
 python _rebuild.py      # 重新生成 data.js 与图片资源
-python _make_icon.py <图标源图>   # 换应用图标
+python _make_icon.py <图标源图>   # 更换应用图标
 ```
 
 ## 数据来源与致谢
@@ -156,13 +151,14 @@ python _make_icon.py <图标源图>   # 换应用图标
 
 ## 版权声明
 
-《明日方舟》《明日方舟：终末地》及相关名称、美术素材版权归**上海鹰角网络科技有限公司**所有。本项目为非盈利的个人学习交流作品，素材仅用于展示收藏管理功能，不作任何商业用途。如有侵权，请联系删除。
+《明日方舟》《明日方舟：终末地》及相关名称、美术素材版权归**上海鹰角网络科技有限公司**所有。
+本项目为非盈利的个人学习交流作品，素材仅用于展示收藏管理功能，不作任何商业用途。如有侵权，请联系删除。
 
 ## 许可证
 
-- **代码**（本仓库中的原创程序代码）：[MIT License](LICENSE) — 可自由使用、修改、分发
-- **第三方内容**（游戏名称、角色名称、美术素材等）：**不在 MIT 授权范围内**，版权归各原权利人所有，详见 [版权与免责声明](DISCLAIMER.md)
-- **商业用途**：禁止。本项目及其任何衍生版本均不得用于售卖、付费服务、广告变现、周边制作等任何商业场景
+- **代码**：[MIT License](LICENSE) — 可自由使用、修改、分发
+- **第三方内容不在 MIT 授权范围内**，版权归各原权利人所有，详见 [版权与免责声明](DISCLAIMER.md)
+- **禁止商业用途**：本项目及其任何衍生版本均不得用于售卖、付费服务、广告变现、周边制作等任何商业场景。
 
 ## Changelog
 
