@@ -38,9 +38,16 @@ def sync(src, dst):
     img_src = os.path.join(src, 'images')
     img_dst = os.path.join(dst, 'images')
     if os.path.exists(img_src):
-        if os.path.exists(img_dst):
-            shutil.rmtree(img_dst)
-        shutil.copytree(img_src, img_dst)
+        # 逐个文件覆盖（不做整目录删除重建，避免误删 + 批量删除保护）
+        n = 0
+        for base, _dirs, files in os.walk(img_src):
+            rel = os.path.relpath(base, img_src)
+            target = img_dst if rel == '.' else os.path.join(img_dst, rel)
+            os.makedirs(target, exist_ok=True)
+            for f in files:
+                shutil.copy2(os.path.join(base, f), os.path.join(target, f))
+                n += 1
+        print('  图片 %d 个' % n)
     print('  同步 ->', os.path.relpath(dst, ROOT))
 
 

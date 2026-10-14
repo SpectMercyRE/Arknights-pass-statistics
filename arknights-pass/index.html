@@ -638,6 +638,7 @@
   .log-item { margin-bottom: 14px; }
   .log-ver { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 3px; }
   .log-desc { font-size: 13px; line-height: 1.7; }
+  .log-del { text-decoration: line-through; opacity: .5; }
   /* ===== 关于页面（独立全屏，右滑入） ===== */
   .about-page {
     position: fixed; inset: 0; z-index: 380;
@@ -828,86 +829,86 @@
     <div class="about-scroll">
       <div class="about-app">
         <div class="about-logo"><img src="images/logo.png" alt="" onerror="this.style.display='none'"></div>
-        <div class="about-name">明日方舟通行认证收集册 <span class="about-ver">v2.44</span></div>
+        <div class="about-name">明日方舟通行认证收集册 <span class="about-ver">v3.0.2</span></div>
         <div class="about-sub">个人学习交流用途 · 数据仅存本地</div>
       </div>
       <div class="about-sec">简介</div>
       <p class="about-p">一款管理明日方舟通行证收藏的离线工具：记录每张通行证的拥有状态、市场价与购入价，自动统计收集进度与盈亏。</p>
       <div class="about-sec">使用介绍</div>
-      <p class="about-p">· 单击干员卡片即可标记 / 取消「已拥有」<br>· 已拥有干员点头像打开价格面板，可记录市场价与多条购买记录（每买一条记一条）<br>· 点整盒预览图可放大查看：双指捏合缩放、单指拖动、双击放大 / 还原、单击或按返回键关闭<br>· 顶部齿轮进入设置，可切换配色主题（罗德岛 / 大炎 / 终末地）与深浅模式<br>· 每张干员卡片右下角叠有其所处势力的标志水印（浅色模式黑标、深色模式白标）<br>· 搜索 / 筛选时只显示命中的干员卡片，不再整盒展开；页面滚动时整盒卡片会逐渐浮现<br>· 价格面板、设置、关于界面均可按系统返回键关闭（价格面板返回不保存）<br>· 整盒收集齐全会点亮流动彩虹边框；建议定期在设置中导出数据备份，换机后可导入恢复</p>
+      <p class="about-p">· 单击干员卡片即可标记 / 取消「拥有状态」<br>· 已拥有的干员，单击头像打开价格面板，可记录市场价与多条购买记录<br>· 点整盒预览图可以放大查看<br>· 单击顶部齿轮进入设置，可切换配色主题（罗德岛 / 大炎 / 终末地）与深色模式<br>· 建议定期在设置中导出数据备份，换机后可导入恢复</p>
       <div class="about-sec">搜索方法</div>
-      <p class="about-p">输入关键词模糊匹配，<b>输完点右侧放大镜或按回车</b>执行搜索（不逐字刷新列表）；有内容时输入框右侧出现小 × 一键清空：<br>· <b>盒名</b>：如「音律」「嘉年华」<br>· <b>干员名</b>：中文名、英文名、全拼、拼音首字母缩写均可（如「能天使」「Exusiai」「nts」「Exu」）<br>· <b>星级</b>：输入「六星」或「6星」<br>· <b>职业</b>：如「近卫」「术师」「狙击」（终末地干员无职业）<br>· <b>阵营 / 势力</b>：如「企鹅物流」「彩虹小队」「莱茵生命」<br>另可用筛选按钮按「已拥有 / 未拥有」与系列类型过滤。</p>
+      <p class="about-p">输入关键词模糊匹配，匹配规则：<br>· <b>盒名</b>：如「音律」「嘉年华」<br>· <b>干员名</b>：中英文名、全拼、拼音首字母缩写均可（如「能天使」「Exusiai」「nts」「Exu」）<br>· <b>星级</b>：输入「六星」或「6星」<br>· <b>职业</b>：如「近卫」「术师」「狙击」<br>· <b>阵营 / 势力</b>：如「企鹅物流」「彩虹小队」「莱茵生命」<br>另可用筛选按钮按「已拥有 / 未拥有」或按通行证系列类型过滤</p>
       <div class="about-sec">计算规则</div>
-      <p class="about-p"><b>官方价</b>：方舟通行证每张（每抽）25 元，主线一盒 14 抽按 350 元计；终末地白名单凭证 / 嘉年华SP 每张 30 元、管理员凭证每张 35 元；特殊礼盒整盒固定价（冬隐归路·霜星 159 元、愚夜密函·W 48 元、美术设定集 VOL.1 259 元）。<br><b>市场价 / 购入价</b>：复数购买制——市场价每干员统一一个，购入价可记多条（每条「购入价 + 数量」），官方价 / 市场价 / 购入价均按数量累加。<br><b>盈亏</b>：市场价合计 − 购入价合计；只统计「填了市场价」的干员，没填市场价的不参与盈亏（但购入价、官方价仍照常统计）。<br><b>收集进度</b>：已拥有张数 ÷ 总张数；进度到 32.5% / 79.9% 会触发彩蛋横幅。<br><b>价格显示</b>：卡片金额 ≥1 万换算「万」、≥1 亿换算「亿」，不保留小数；顶部统计大额保留两位小数。</p>
+      <p class="about-p"><b>官方价</b>：以官方贩售价格为准；特殊礼盒为整盒价格<br><b>市场价 / 购入价</b>：复数购买，购入价可记多条（每条「购入价 + 数量」），市场价每干员仅有1个<br><b>以上价格均按数量累加</b><br><b>盈亏</b>：市场价 − 购入价；盈亏仅统计「填过市场价」的干员，购入价、官方价仍照常统计<br><b>收集进度</b>：已拥有张数 ÷ 总张数，<b>收集进度到一些神秘数字可以触发神秘事件ww</b></p>
       <div class="about-sec">致谢</div>
-      <p class="about-p">通行证整盒缩略图（1.0 ~ 55.0 主线系列）由小红书 @KJCJS 统计整理，特此致谢。<br>通行证干员分布由燎冬谣老师整理提供，特此致谢。</p>
+      <p class="about-p">通行证整盒缩略图（1.0 ~ 55.0 主线系列）使用了小红书 @KJCJS 老师的整理资料，特此致谢<br>通行证干员分布使用了Bilibili @燎冬谣 老师的整理资料，特此致谢<br>明日方舟以及终末地相关素材使用明日方舟终末地森空岛wiki以及PRTS wiki的数据，特此致谢</p>
       <div class="about-sec">开源信息</div>
-      <p class="about-p">本项目为个人学习交流用途制作，纯前端单页应用，基于 Capacitor 打包为安卓客户端；全部数据仅存储在设备本地，不上传任何服务器。<br>明日方舟及相关名称、素材版权归上海鹰角网络科技有限公司所有。</p>
+      <p class="about-p">本项目为个人学习交流用途制作，纯前端应用，打包为安卓客户端<br>本软件的全部数据仅存储在设备本地，不会上传任何服务器以及收集任何信息<br>明日方舟，明日方舟终末地及相关名称、素材版权归上海鹰角网络科技有限公司所有</p>
       <div class="about-sec">更新日志</div>
       <div class="about-log">
-        <div class="log-item"><div class="log-ver">v2.44</div><div class="log-desc">修复搜索后勾选卡片重新浮现的问题：搜索/筛选视图下勾选改为增量移除——只有不再匹配条件的卡片单独离场（其余卡片原地不动），不再整表重建导致全屏重新浮现；点 × 清空搜索栏不再自动聚焦弹输入法。</div></div>
-        <div class="log-item"><div class="log-ver">v2.43</div><div class="log-desc">图片预览升级：双指捏合缩放（以双指中点为锚点、最高 4 倍）、放大后单指自由拖动（带平移边界）、双击放大到 2.5 倍 / 再双击还原、单击关闭；预览界面支持安卓返回键 / 导航手势退出；桌面版额外支持滚轮缩放。手势层用 Pointer Events 统一实现，点击整盒预览图即达。</div></div>
-        <div class="log-item"><div class="log-ver">v2.42</div><div class="log-desc">水波动画引擎更换：经浏览器自动化逐帧实测，clip-path 插值在部分安卓 WebView 上被丢弃（v2.37 transition / v2.40 keyframes / v2.41 WAAPI 三种引擎均退化成瞬时变色，桌面端全部正常）——改用 width 0→100% 宽度展开（最基础的属性插值，任何 WebView 必支持，圆角随宽度自然保持），从左涌入 / 退回效果稳定必播。</div></div>
-        <div class="log-item"><div class="log-ver">v2.41</div><div class="log-desc">水波动画改用 Web Animations API 直接驱动卡片内真实元素，从左涌入 / 退回的抹开效果必播不丢失；修复彩虹边框消失时因定位锚点丢失导致的错位（淡出期间保持锚定）；接入 @capacitor/app 插件，安卓返回键 / 手势可关闭价格面板（不保存）、设置、关于与确认框（返回=取消），无弹层时正常退出应用；筛选面板分割线上下加间距。</div></div>
-        <div class="log-item"><div class="log-ver">v2.40</div><div class="log-desc">水波动画改用关键帧动画并强制重触发，翻页滚动后勾选不再偶发丢失动画；彩虹边框补上与出现等长的淡出动画；筛选面板改为浮动下拉（悬浮在内容上、不再推挤页面），滚动时自动收起；价格面板改为三段式布局，顶部横杠标题与「添加一条购买 / 保存」按钮固定可见，中间记录区独立滚动；彩虹小队浅色模式改为整图反色（黑白互换，图案细节保留）；安卓返回键 / 导航返回手势可关闭价格面板（不保存）、设置与关于界面。</div></div>
-        <div class="log-item"><div class="log-ver">v2.39</div><div class="log-desc">应用图标改为完整显示原图（自适应图标缩至安全区内，通行证不再被裁）；单卡干员的数量行常驻占位，录入复数时卡片高度不再跳变；搜索框新增放大镜搜索按钮与 × 清空钮，输入不再逐字刷新列表（点按钮或回车才搜索）；添加购买记录不再自动唤起输入法；价格面板改为内容区滚动、保存按钮固定不被顶走；勾选改为增量更新（连续勾选不卡顿、水波动画不丢）；筛选面板展开收起动画优化；霜星/博士/Ace/Scout/Outcast/Mantra 归入罗德岛阵营（显示水印并可按阵营搜索）；Ave Mujica 水印调大；彩虹小队浅色模式换黑版（原版黑白图案在浅色卡上白半边隐形）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.38</div><div class="log-desc">更换应用图标：阿米娅举通行证插画（自适应图标背景取插画四角均值深蓝黑 #101419）；图标生成逻辑固化为 _make_icon.py 脚本，以后换图直接重跑。</div></div>
-        <div class="log-item"><div class="log-ver">v2.37</div><div class="log-desc">复数 ×N 标记从干员名后挪到「精一 / 精二」标签后面，低星等没有标签行的干员单独加一行；勾选水波改用圆角裁切动画，与卡片圆角完全贴合；对勾角标、三道杠角标、彩虹边框补上弹出 / 消失动画；筛选面板展开收起加动画；下滑进度条下移 6px、出现动画不再卡顿；搜索新增「阵营 / 势力」条件，搜索框提示精简、完整搜索方法移入「关于软件」；终末地主题按官方 Wiki 风格重做（近黑炭底+警示黄+品红，浅色白底+明黄）；势力图标统一归一化为同尺寸，彩虹小队改用原色图案；滚动浏览时整盒卡片逐渐浮现（往回浏览同样浮现，且不再卡顿）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.36</div><div class="log-desc">录入全干员（方舟 464 + 终末地 35）英文名与所属势力；每张干员卡片右下角叠上势力标志水印（浅色模式黑标、深色模式白标，S.E.E.S 反色、Ave Mujica 与罗德岛保持原色）；搜索新增「职业」条件（近卫/术师等，终末地干员无职业）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.35</div><div class="log-desc">应用图标重制：裁掉白边铺满显示；彩虹特效改为纯描边（不再遮挡卡片内容）；大炎深色主题背景换成暗金色调；终末地浅色主题的黄色提亮为明快金黄。</div></div>
-        <div class="log-item"><div class="log-ver">v2.34</div><div class="log-desc">盈亏修正：没填市场价的干员不再参与盈亏计算（购入价、官方价仍照常统计）；搜索/筛选改为干员级过滤，按名称、拥有状态搜索时只显示命中的干员卡片，不再整盒展开；搜索新增英文名、拼音、首字母缩写（终末地干员英文名已录入）；「关于软件」重写并补全计算规则。</div></div>
-        <div class="log-item"><div class="log-ver">v2.33</div><div class="log-desc">新增「大炎」（朱砂红+鎏金）与「终末地」（工业黑灰+警示黄）两套配色主题，均含浅色/深色模式，设置中可切换；替换应用图标；版本号与应用版本同步。动效全面升级：卡片进出场动画（淡入上滑/缩小淡出）、勾选水波动画（绿色从左流入、取消向右流出）、整盒收集齐全时流动彩虹边框（彩蛋横幅同款）、下滑进度条平滑出现、添加购买记录行滑入并自动聚焦。</div></div>
-        <div class="log-item"><div class="log-ver">v2.32</div><div class="log-desc">购买记录：购入价留空时统一按 0 元如实保存（不再跳过「价格空 + 数量 1」的行）；0 元购入也会正常计入数量与卡片显示。购入价区域默认不再塞空行占位，想记购买记录就点「＋ 添加一条购买」。</div></div>
-        <div class="log-item"><div class="log-ver">v2.31</div><div class="log-desc">录入《明日方舟：终末地》全部 35 名干员的星级信息（六星 20 个形态 / 五星 10 / 四星 5），终末地系列通行证支持按星级检索（输入「六星」「4星」等可筛出对应终末地干员）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.30</div><div class="log-desc">复数购买数量输入限制（输入 0 自动改为 1）；购入价留空但有数量时按 0 元保存记录；干员卡片金额达到 1 亿时换算成「亿」（四舍五入、不保留小数）；价格面板「购买记录」改为「购入价」、输入框占位符统一为 0.00；筛选栏吸顶固定，筛选条件默认折叠（点右侧箭头展开），下滑时顶部显示收集进度小条。</div></div>
-        <div class="log-item"><div class="log-ver">v2.29</div><div class="log-desc">「杰斯顿·威廉姆斯」简化显示为「杰斯顿」；复数购买 ×N 标记从价格栏移到干员名字后；搜索支持按星级过滤（输入「一星」~「六星」或「1星」~「6星」）；修复搜索时输入法被弹飞的问题（输入过程中不再重建搜索框）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.28</div><div class="log-desc">导出数据升级为调系统分享面板（可发微信/QQ/存网盘等），浏览器版自动降级为直接下载；接入 Capacitor Filesystem + Share 插件，修复安卓端导出无响应的问题。</div></div>
-        <div class="log-item"><div class="log-ver">v2.27</div><div class="log-desc">全干员头像 100% 点亮：补入大帝头像；「莱因哈特」错别字更正为「莱恩哈特」（头像共用）；真言与 Mantra 为同一人——精一共用一张图（音律联觉/白名单凭证/主线通用），精二用本体立绘单独一张。</div></div>
-        <div class="log-item"><div class="log-ver">v2.26</div><div class="log-desc">音律联觉、嘉年华系列的干员头像用同名本体精一头像替代；终末地系列嵌入终末地干员头像（裁成正方形，管理员男女各一张通用）；头像库补齐至 841 个。</div></div>
-        <div class="log-item"><div class="log-ver">v2.25</div><div class="log-desc">补齐全部系列整盒预览图（106 盒全覆盖）；补入整合运动、精英干员（Ace/Scout/Outcast/Mantra）、霜星、博士等头像，美术设定集礼盒头像点亮；新增终末地「管理员凭证Beta」「管理员凭证4期」两盒；致谢新增燎冬谣老师（通行证干员分布）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.24</div><div class="log-desc">集成映射（含集成映射：野趣拾光）归入嘉年华系列；全系列按类别重排（数字→音律联觉→嘉年华→联动→精英→特殊→终末地），嘉年华按 2022/2024/2026/集成映射/野趣拾光 排列；干员名字不再被省略号截断，长名自动换行完整显示。</div></div>
-        <div class="log-item"><div class="log-ver">v2.23</div><div class="log-desc">修正三个干员名错别字（安塞尔→安赛尔、折栀→折桠、黛菲恩→戴菲恩），对应头像同步改名；数据生成脚本同步固化本轮全部修正规则，方便日后重跑。</div></div>
-        <div class="log-item"><div class="log-ver">v2.22</div><div class="log-desc">数据大修订：数字系列统一加「明日方舟」前缀；干员名改回原名（尤里卡→U-Official、特蕾西娅→魔王、摘英→撷英调香师、乌啸→乌啾、阿尔图罗→塑心，精英干员改首字母大写）；32.0 补入维荻；野趣拾光/嘉年华2026 归入嘉年华系列；6周年礼盒归特殊系列；霜星/W/博士三个礼盒改整盒价（159/48/259）并更名；干员名称字号统一。</div></div>
-        <div class="log-item"><div class="log-ver">v2.21</div><div class="log-desc">终末地系列官方价修正：白名单凭证/嘉年华SP 每张（每抽）30 元、管理员凭证每张（每抽）35 元，按点亮张数逐张计；其余系列仍每张 25 元。</div></div>
-        <div class="log-item"><div class="log-ver">v2.20</div><div class="log-desc">终末地系列加入官方价体系：白名单凭证/嘉年华SP 单抽 30 元、管理员凭证单抽 35 元（本版曾误按整盒计，已由 v2.21 修正）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.19</div><div class="log-desc">数据大重建！换上权威的通行认证统计表（104 盒）和全部干员表（463 个干员的职业/星级），干员头像、势力图标全量补进；顺手修好尤里卡、乌啸、郁金香等异名头像。</div></div>
-        <div class="log-item"><div class="log-ver">v2.18</div><div class="log-desc">新增「精英干员系列」和「明日方舟:终末地」两个分类，筛选按钮缩小一排放下。</div></div>
-        <div class="log-item"><div class="log-ver">v2.17</div><div class="log-desc">更新日志补全，从 v0.1 一路记到 v2.16。</div></div>
-        <div class="log-item"><div class="log-ver">v2.16</div><div class="log-desc">「关于软件」从底部抽屉升级成独立全屏页面（右边滑入，顶部带返回栏和 logo 头部）；新增「致谢」，感谢小红书 @KJCJS 整理的整盒缩略图；设置界面按钮去掉 emoji、换成线性小图标；价格输入自动去掉末尾多余的 0（0.50 → 0.5、128.00 → 128）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.15</div><div class="log-desc">支持「复数」收藏：同一个干员能记多条购买记录，每条单独记「购入价 + 数量」，市场价统一一个；价格统计（官方价/市场价/购入价/盈亏）全部按数量累加，点亮和进度还是只看「有没有」；卡片价格行在复数时会显示 ×数量 标记；老数据自动兼容不丢。</div></div>
-        <div class="log-item"><div class="log-ver">v2.14</div><div class="log-desc">数字系列标题统一加上「通行认证」前缀；补进 1.0 ~ 55.0 主线整盒缩略图；顺带补上 49.0 ~ 55.0 七个空缺系列（干员名单暂待校对）。</div></div>
-        <div class="log-item"><div class="log-ver">v2.13</div><div class="log-desc">金额显示拆成两套规则：顶部统计新增「亿」档（保留两位小数），干员价格有「万」就不显示小数；顶部统计数字字号调小一号。</div></div>
-        <div class="log-item"><div class="log-ver">v2.12</div><div class="log-desc">金额显示统一格式化，大额自动换算成「万」不再溢出；价格输入上限 325 万。</div></div>
-        <div class="log-item"><div class="log-ver">v2.11</div><div class="log-desc">进度条里藏了两个小彩蛋：收集进度到 32.5% / 79.9% 时，顶部会浮现金色横幅。</div></div>
-        <div class="log-item"><div class="log-ver">v2.10</div><div class="log-desc">三道杠按钮从卡片右下角改成头像右下角的小角标，点头像直接改价，排版更清爽。</div></div>
-        <div class="log-item"><div class="log-ver">v2.9</div><div class="log-desc">盒标题统一小字号；价格行「卖/买」改成「市场/购入」，过长自动防换行。</div></div>
-        <div class="log-item"><div class="log-ver">v2.8</div><div class="log-desc">盒信息改成三行布局（类型标签 / 盒名 / 价格），价格只留官方价和盈亏；干员卡片文字改左对齐，名字随长度自动缩字号。</div></div>
-        <div class="log-item"><div class="log-ver">v2.7</div><div class="log-desc">价格输入限制为整数或两位小数、不能为负；拥有和类型筛选之间加分隔线；三道杠挪到右下角；修复 21:9 手机上价格标签被挤成竖排的问题。</div></div>
-        <div class="log-item"><div class="log-ver">v2.6</div><div class="log-desc">长盒名、价格栏过长时自动缩字号，不再换行顶出。</div></div>
-        <div class="log-item"><div class="log-ver">v2.5</div><div class="log-desc">长干员名（比如缄默德克萨斯、U-Official）自动缩字号，不再换行。</div></div>
-        <div class="log-item"><div class="log-ver">v2.4</div><div class="log-desc">换成罗德岛蓝配色，卡片加了塑料质感的高光和投影。</div></div>
-        <div class="log-item"><div class="log-ver">v2.3</div><div class="log-desc">性能优化：勾选干员更流畅，头像懒加载减少卡顿。</div></div>
-        <div class="log-item"><div class="log-ver">v2.2 / v2.1</div><div class="log-desc">单卡和双卡之间的网格间距微调，优化布局。</div></div>
-        <div class="log-item"><div class="log-ver">v2.0</div><div class="log-desc">布局微调，右下角加了「回到顶部」按钮。</div></div>
-        <div class="log-item"><div class="log-ver">v1.9</div><div class="log-desc">头像加大、盒标题和徽章加大；浅色模式下 logo 自动反色适配；新增回到顶部按钮。</div></div>
-        <div class="log-item"><div class="log-ver">v1.8</div><div class="log-desc">头像改成左侧方形，路径精确到「系列 + 干员 + 精别」，不同盒、不同精别不再串图。</div></div>
-        <div class="log-item"><div class="log-ver">v1.7</div><div class="log-desc">单精干员单独成块；取消拥有时二次确认防误删。</div></div>
-        <div class="log-item"><div class="log-ver">v1.6</div><div class="log-desc">类型体系扩展，新增嘉年华、联动系列；价格面板瘦身。</div></div>
-        <div class="log-item"><div class="log-ver">v1.5</div><div class="log-desc">新增「关于软件」面板，设置里加了分组。</div></div>
-        <div class="log-item"><div class="log-ver">v1.4</div><div class="log-desc">换上罗德岛 logo 和应用图标；单击卡片就能直接勾选拥有。</div></div>
-        <div class="log-item"><div class="log-ver">v1.3</div><div class="log-desc">新增深 / 浅 / 跟随系统三档主题切换；搜索框上移；修复盒内卡片错位的布局问题。</div></div>
-        <div class="log-item"><div class="log-ver">v1.2</div><div class="log-desc">修掉盒内卡片跑到介绍右边的布局 bug；进度条做得更酷炫。</div></div>
-        <div class="log-item"><div class="log-ver">v1.1</div><div class="log-desc">盒内图片和介绍改成左右排布；筛选拆成两行；支持按盒名 / 干员名搜索。</div></div>
-        <div class="log-item"><div class="log-ver">v1.0</div><div class="log-desc">手机端大改版：点卡片弹底部面板、自适应网格、右上角菜单收纳导出导入、统计栏重排，全面适配触屏操作。</div></div>
-        <div class="log-item"><div class="log-ver">v0.9</div><div class="log-desc">价格改成「按张算」，每张独立记市场价 + 购入价；新增盈亏统计；点缩略图可看大图。</div></div>
-        <div class="log-item"><div class="log-ver">v0.8</div><div class="log-desc">音律联觉（SP）系列盒图识图切图接入。</div></div>
-        <div class="log-item"><div class="log-ver">v0.7</div><div class="log-desc">主线系列盒图识图切图接入（1.0 ~ 6.0）。</div></div>
-        <div class="log-item"><div class="log-ver">v0.6</div><div class="log-desc">统计文字居中，收集进度补上进度条，单卡干员等高对齐。</div></div>
-        <div class="log-item"><div class="log-ver">v0.5</div><div class="log-desc">卡片排布改成「同干员上下、不同干员左右」。</div></div>
-        <div class="log-item"><div class="log-ver">v0.4</div><div class="log-desc">补齐联动系列：彩六一二期、Ave Mujica、九色鹿、罗小黑。</div></div>
-        <div class="log-item"><div class="log-ver">v0.3</div><div class="log-desc">数字系列拆成精一 / 精二两张卡（一盒 14 抽），低星干员只算精一。</div></div>
-        <div class="log-item"><div class="log-ver">v0.2</div><div class="log-desc">改成盒级展示，每个系列一盒、左图右干员；市场价可编辑输入。</div></div>
-        <div class="log-item"><div class="log-ver">v0.1</div><div class="log-desc">初版上线：干员卡片展示、拥有勾选、筛选、统计看板、导出导入。</div></div>
+        <div class="log-item"><div class="log-ver">v3.0.2</div><div class="log-desc">修复搜索后勾选卡片重新浮现的问题。<br>目前点击按钮清空搜索栏后不再会弹出输入法。</div></div>
+        <div class="log-item"><div class="log-ver">v3.0.1</div><div class="log-desc">图片预览升级：当前可对图片进行放大查看。</div></div>
+        <div class="log-item"><div class="log-ver">v3.0.0</div><div class="log-desc">重构代码，软件引擎升级，大幅优化渲染逻辑，目前所有动画都会正常播放。</div></div>
+        <div class="log-item"><div class="log-ver">v2.4.2</div><div class="log-desc">增加系统导航键支持，现在可以通过导航键返回上一页了。<br>修复动画偶发性bug。</div></div>
+        <div class="log-item"><div class="log-ver">v2.4.1</div><div class="log-desc">优化添加价格界面的UI逻辑，优化搜索和筛选的UI表现。<br>修复彩虹小队logo在浅色模式下的异常表现。<br>修复动画偶发性bug。</div></div>
+        <div class="log-item"><div class="log-ver">v2.4.0</div><div class="log-desc">更改应用图标。<br>优化干员卡片高度展示。<br>搜索框新增放大镜搜索按钮与清空按钮，目前只有点击按钮或回车才会执行搜索。<br>添加购买记录时不再自动唤起输入法。<br>目前，霜星/博士/Ace/Scout/Outcast/Mantra 归入罗德岛阵营；微调Ave Mujica水印尺寸。<br>修复动画偶发性bug。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.5</div><div class="log-desc">小改动。<br>高情商：优化了用户体验。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.4</div><div class="log-desc">修改干员卡片UI位置。<br>修改并优化勾选干员时的动画；添加了筛选面板展开收起的动画，添加了浏览时的卡片动画。<br>搜索新增「阵营 / 势力」条件搜索，精简搜索框提示。<br>重做了「终末地」主题。<br>修改势力图标统一设定为同尺寸。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.3</div><div class="log-desc">录入全部干员的英文名与所属势力，目前所有干员均可以进行英文名搜索。<br>每张干员卡片右下角将出现势力标志水印，浅色模式和深色模式使用2套Logo。<br>（浅色模式黑标、深色模式白标，S.E.E.S 反色、Ave Mujica与罗德岛保持原色）<br>搜索新增「职业」条件。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.2</div><div class="log-desc">应用图标重制。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.1</div><div class="log-desc">盈亏统计修正：现在没填市场价的干员不再参与盈亏计算（购入价、官方价仍照常统计）。<br>搜索/筛选改为干员级过滤，搜索时只显示结果符合的干员卡片，不再整盒展开。<br>录入了终末地干员英文名，现在数据库会保存所有干员的英文名。<br>搜索新增按英文名、拼音、首字母缩写搜索。</div></div>
+        <div class="log-item"><div class="log-ver">v2.3.0</div><div class="log-desc">新增「大炎」与「终末地」两套配色主题，均含浅色/深色模式，可于设置中切换。<br>从现在开始，版本号与应用版本同步。<br>加入了卡片进出场动画，勾选动画，整盒收集齐全时的彩虹动画。<br>优化UI表现逻辑。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.7</div><div class="log-desc">修复了输入价格时不修改任何数据的情况下不会正确保存的bug。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.6</div><div class="log-desc">补充明日方舟：终末地全部 干员的星级信息。<br>终末地系列通行证支持按星级检索。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.5</div><div class="log-desc">新增了复数购买数量输入限制，最低为1。购入价留空但有数量时按 0 元保存记录。<br>干员卡片金额达到 1 亿时换算成「亿」。<br>微调了文字提示。<br>现在，筛选栏会默认折叠，下滑浏览时顶部会显示收集进度。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.4</div><div class="log-desc">修改个别干员名称。<br>优化干员卡片UI排布。<br>目前，搜索支持按星级搜索。<br>修复了搜索时输入法被弹飞的问题。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.3</div><div class="log-desc">导出数据功能升级，当前会调取系统分享面板。<br>修复安卓端导出无响应的问题。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.2</div><div class="log-desc">补充大帝头像。<br>补充了特殊干员的数据共用规则。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.1</div><div class="log-desc">现在开始，音律联觉、嘉年华系列的干员头像用同名本体精一头像替代。<br>终末地系列嵌入终末地干员头像（裁成正方形，管理员男女各一张通用）；头像库补齐至 841 个。</div></div>
+        <div class="log-item"><div class="log-ver">v2.2.0</div><div class="log-desc">补齐全部系列整盒预览图（106 盒）。<br>补充整合运动、精英干员（Ace/Scout/Outcast/Mantra）、霜星、博士的头像。<br>新增终末地「管理员凭证Beta」「管理员凭证4期」两盒。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.5</div><div class="log-desc">浏览页面按类别重排（数字→音律联觉→嘉年华→联动→精英→特殊→终末地）<br>重新设定了单tag下的排列，现在将按推出年份排列。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.4</div><div class="log-desc">纠错修正了三个干员的错别字（安塞尔→安赛尔、折栀→折桠、黛菲恩→戴菲恩）<br>数据生成脚本应用本轮全部修正规则。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.3</div><div class="log-desc">逐个统计了干员的错别字和名字，现在显示都将以游戏内干员名称为准。<br>重新校队（我故意的）了 所有通行证分盒的归类。<br>添加了霜星/W/美术设定集等礼盒的价格。<br>现在开始，干员名称的字号统一。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.2</div><div class="log-desc">终末地系列官方价修正，现在的官方价格统计会正确计算。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.1</div><div class="log-desc">终末地系列白名单凭证和管理员凭证加入价格统计。</div></div>
+        <div class="log-item"><div class="log-ver">v2.1.0</div><div class="log-desc">补全全部数据库：<br>引入通行认证统计表（104 盒）<br>全部干员表（463 个干员，职业/星级）<br>明日方舟干员头像<br>明日方舟势力图标<br>数据库现在可以进行模糊比对，如（尤里卡—U-Official，塑心—阿尔图罗）</div></div>
+        <div class="log-item"><div class="log-ver">v2.0.3</div><div class="log-desc">新增「精英干员系列」和「明日方舟:终末地」两个分类。<br>微调UI尺寸。</div></div>
+        <div class="log-item"><div class="log-ver">v2.0.2</div><div class="log-desc">更新日志补全。</div></div>
+        <div class="log-item"><div class="log-ver">v2.0.1</div><div class="log-desc">关于软件界面从抽屉升级为独立页面。<br>引入了一套icon为UI使用。<br>现在，价格输入会自动去掉小数点后的 0。</div></div>
+        <div class="log-item"><div class="log-ver">v2.0.0</div><div class="log-desc">全新功能：支持「复数」收藏。同一个干员能记多条购买记录，每条单独记录「购入价 + 数量」。<br>价格统计（官方价/市场价/购入价/盈亏）全部按数量累加，拥有情况和进度保持不变。<br>卡片价格行在复数时会显示数量标记。<br>支持旧数据导入。</div></div>
+        <div class="log-item"><div class="log-ver">v1.5.2</div><div class="log-desc">规范化数字系列标题。<br>补充 1.0 ~ 55.0 通行证整盒缩略图。</div></div>
+        <div class="log-item"><div class="log-ver">v1.5.1</div><div class="log-desc">金额显示现在为两套规则：<br>顶部统计新增「亿」档，保留两位小数。<br>干员价格有「万」不显示小数。<br>微调字号和UI布局。</div></div>
+        <div class="log-item"><div class="log-ver">v1.5.0</div><div class="log-desc">金额显示统一格式，大额自动换算成「万」不再溢出。<br>价格输入上限现在为 3250000。</div></div>
+        <div class="log-item"><div class="log-ver">v1.4.4</div><div class="log-desc">我有2个彩蛋！全场欢呼！</div></div>
+        <div class="log-item"><div class="log-ver">v1.4.3</div><div class="log-desc">将三道杠按钮从卡片右下角修改成头像右下角的角标。<br>现在可以点击头像直接改价。</div></div>
+        <div class="log-item"><div class="log-ver">v1.4.2</div><div class="log-desc">修改单盒标题字号，使长标题完整显示。<br>价格描述文字改为更加官方的描述。</div></div>
+        <div class="log-item"><div class="log-ver">v1.4.1</div><div class="log-desc">盒信息改成三行布局（标签 / 盒名 / 价格）。<br>价格仅保留官方价和盈亏。<br>修改干员卡片文字排布。<br><del class="log-del">现在，干员名字会正确地随长度自动缩字号。</del><br>此条已回调</div></div>
+        <div class="log-item"><div class="log-ver">v1.4.0</div><div class="log-desc">增加价格输入限制，仅能输入整数或两位小数、不能为负（不要点炒面）<br>UI微调，使其更加美观。<br>修复特殊屏幕比例手机上价格标签被挤成竖排的问题。</div></div>
+        <div class="log-item"><div class="log-ver">v1.3.2</div><div class="log-desc"><del class="log-del">长盒名、价格栏过长时自动缩字号，不再换行顶出。</del><br>此条已回调</div></div>
+        <div class="log-item"><div class="log-ver">v1.3.1</div><div class="log-desc"><del class="log-del">长干员名（比如缄默德克萨斯、U-Official）自动缩小字号，不再换行。</del><br>此条已回调</div></div>
+        <div class="log-item"><div class="log-ver">v1.3.0</div><div class="log-desc">更改软件UI配色。<br>卡片添加了塑料质感的高光和投影。</div></div>
+        <div class="log-item"><div class="log-ver">v1.2.3</div><div class="log-desc">整体性能优化，优化调度逻辑。</div></div>
+        <div class="log-item"><div class="log-ver">v1.2.2</div><div class="log-desc">UI布局微调。<br>添加了「回到顶部」按钮。</div></div>
+        <div class="log-item"><div class="log-ver">v1.2.1</div><div class="log-desc">优化干员卡片和单盒卡片UI排布。<br>浅色模式下 logo 自动反色适配。<br>新增回到顶部按钮。</div></div>
+        <div class="log-item"><div class="log-ver">v1.2.0</div><div class="log-desc">增加了干员头像。<br>优化数据库逻辑，优化搜索逻辑。</div></div>
+        <div class="log-item"><div class="log-ver">v1.1.4</div><div class="log-desc">优化操作逻辑，现在取消拥有已经输入价格的干员时二次确认。</div></div>
+        <div class="log-item"><div class="log-ver">v1.1.3</div><div class="log-desc">数据类型扩展，新增嘉年华、联动系列。<br>微调了价格面板。</div></div>
+        <div class="log-item"><div class="log-ver">v1.1.2</div><div class="log-desc">新增「关于软件」面板。</div></div>
+        <div class="log-item"><div class="log-ver">v1.1.1</div><div class="log-desc">优化了操作逻辑，现在单击卡片就能直接勾选拥有。</div></div>
+        <div class="log-item"><div class="log-ver">v1.1.0</div><div class="log-desc">新增深 / 浅 / 跟随系统深浅模式切换。<br>新增了设置界面。<br>修复盒内卡片错位的布局问题；更改了搜索框位置。</div></div>
+        <div class="log-item"><div class="log-ver">v1.0.2</div><div class="log-desc">修复UI的布局bug。<br>进度条做得更酷炫了。</div></div>
+        <div class="log-item"><div class="log-ver">v1.0.1</div><div class="log-desc">更改单盒UI排布；更改筛选tag排布。<br>搜索目前支持按盒名 / 干员名搜索。</div></div>
+        <div class="log-item"><div class="log-ver">v1.0.0</div><div class="log-desc">引入手机端。<br>软件改版，优化整体UI逻辑以及排布。</div></div>
+        <div class="log-item"><div class="log-ver">v0.9</div><div class="log-desc">价格改成「按张算」，每张独立记市场价 + 购入价。<br>新增盈亏统计；点缩略图可看大图。</div></div>
+        <div class="log-item"><div class="log-ver">v0.8</div><div class="log-desc">加入了音律联觉相关数据。</div></div>
+        <div class="log-item"><div class="log-ver">v0.7</div><div class="log-desc">加入了部分数据用于测试。</div></div>
+        <div class="log-item"><div class="log-ver">v0.6</div><div class="log-desc">增加收集进度条。<br>更改UI排布。</div></div>
+        <div class="log-item"><div class="log-ver">v0.5</div><div class="log-desc">更改UI排布，优化视觉效果。</div></div>
+        <div class="log-item"><div class="log-ver">v0.4</div><div class="log-desc">补齐了联动相关干员数据。</div></div>
+        <div class="log-item"><div class="log-ver">v0.3</div><div class="log-desc">优化数据库。</div></div>
+        <div class="log-item"><div class="log-ver">v0.2</div><div class="log-desc">通行证通过盒级展示，每个系列一盒、市场价可编辑输入。</div></div>
+        <div class="log-item"><div class="log-ver">v0.1</div><div class="log-desc">网页版初版上线：干员卡片展示、拥有勾选、筛选、统计、导出导入数据功能。<br>---</div></div>
+      </div>
       </div>
     </div>
   </div>
