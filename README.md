@@ -36,57 +36,45 @@
 |:---:|:---:|:---:|
 | <img src="docs/screenshots/theme-rhodes.jpg" width="280"> | <img src="docs/screenshots/theme-yan.jpg" width="280"> | <img src="docs/screenshots/theme-endfield.jpg" width="280"> |
 
-### 搜索与筛选
-
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/search-filter.jpg" width="380"></td>
-<td valign="middle">支持盒名、干员中英文名、全拼、拼音首字母、星级、职业、阵营势力；可按拥有状态与系列类型过滤。</td>
+<td valign="middle"><h3>搜索与筛选</h3>支持盒名、干员中英文名、全拼、拼音首字母、星级、职业、阵营势力；可按拥有状态与系列类型过滤。</td>
 </tr>
 </table>
-
-### 价格、复数购买与盈亏
 
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/price-records.jpg" width="380"></td>
-<td valign="middle">点开整盒预览图可放大查看；同一张通行证支持记录多条购买记录（各带购入价与数量），盈亏自动计算。</td>
+<td valign="middle"><h3>价格、复数购买与盈亏</h3>点开整盒预览图可放大查看；同一张通行证支持记录多条购买记录（各带购入价与数量），盈亏自动计算。</td>
 </tr>
 </table>
-
-### 收集特效
 
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/collection-effects.jpg" width="380"></td>
-<td valign="middle">整盒收齐点亮流动彩虹边框，联动系列使用专属 LOGO，勾选时有水波与角标动画。</td>
+<td valign="middle"><h3>收集特效</h3>整盒收齐点亮流动彩虹边框，联动系列使用专属 LOGO，勾选时有水波与角标动画。</td>
 </tr>
 </table>
-
-### 进度彩蛋与特殊系列
 
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/progress-egg.jpg" width="380"></td>
-<td valign="middle">收集进度到特定数字会触发隐藏横幅；精英干员、周年礼盒等特殊系列单独成盒收录。</td>
+<td valign="middle"><h3>进度彩蛋与特殊系列</h3>收集进度到特定数字会触发隐藏横幅；精英干员、周年礼盒等特殊系列单独成盒收录。</td>
 </tr>
 </table>
-
-### 设置与关于
 
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/settings-about.jpg" width="380"></td>
-<td valign="middle">主题切换、深浅模式、数据导入导出，以及完整的软件简介与更新日志。</td>
+<td valign="middle"><h3>设置与关于</h3>主题切换、深浅模式、数据导入导出，以及完整的软件简介与更新日志。</td>
 </tr>
 </table>
-
-### 数据来源
 
 <table>
 <tr>
 <td width="410"><img src="docs/screenshots/database.jpg" width="380"></td>
-<td valign="middle">干员字段（职业 / 星级 / 英文名 / 势力）与通行证分盒归类，来自逐条整理的源表。</td>
+<td valign="middle"><h3>数据来源</h3>干员字段（职业 / 星级 / 英文名 / 势力）与通行证分盒归类，来自逐条整理的源表。</td>
 </tr>
 </table>
 
