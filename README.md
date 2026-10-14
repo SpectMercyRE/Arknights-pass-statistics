@@ -1,14 +1,11 @@
 # 明日方舟·通行认证收集册
 
-<p align="center">
-  <img src="docs/screenshots/app-icon.png" width="120" alt="通行认证收集册">
-</p>
-
-一款管理《明日方舟》《明日方舟:终末地》通行认证收藏的**离线工具应用**，基于 **Capacitor** 打包为安卓客户端。
-
-记录每张通行证的拥有状态、市场价与购入价，自动统计收集进度与盈亏  
-支持按盒名/干员名/英文名/拼音首字母/星级/职业/势力搜索  
-包含三套配色主题（罗德岛 / 大炎 / 终末地），支持深色模式
+<table>
+<tr>
+<td width="170" valign="middle"><img src="docs/screenshots/app-icon.png" width="150" alt="通行认证收集册"></td>
+<td valign="middle">一款管理《明日方舟》《明日方舟:终末地》通行认证收藏的<strong>离线工具应用</strong>，基于 <strong>Capacitor</strong> 打包为安卓客户端。<br><br>记录每张通行证的拥有状态、市场价与购入价，自动统计收集进度与盈亏<br>支持按盒名/干员名/英文名/拼音首字母/星级/职业/势力搜索<br>包含三套配色主题（罗德岛 / 大炎 / 终末地），支持深色模式</td>
+</tr>
+</table>
 
 > [!IMPORTANT]
 > 本仓库**不包含游戏素材**（干员头像、预览图、势力图标），版权归**上海鹰角网络科技有限公司**所有，不在本项目的 MIT 授权范围内。
@@ -41,39 +38,57 @@
 
 ### 搜索与筛选
 
-支持盒名、干员中英文名、全拼、拼音首字母、星级、职业、阵营势力；可按拥有状态与系列类型过滤。
-
-<p><img src="docs/screenshots/search-filter.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/search-filter.jpg" width="380"></td>
+<td valign="middle">支持盒名、干员中英文名、全拼、拼音首字母、星级、职业、阵营势力；可按拥有状态与系列类型过滤。</td>
+</tr>
+</table>
 
 ### 价格、复数购买与盈亏
 
-点开整盒预览图可放大查看；同一张通行证支持记录多条购买记录（各带购入价与数量），盈亏自动计算。
-
-<p><img src="docs/screenshots/price-records.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/price-records.jpg" width="380"></td>
+<td valign="middle">点开整盒预览图可放大查看；同一张通行证支持记录多条购买记录（各带购入价与数量），盈亏自动计算。</td>
+</tr>
+</table>
 
 ### 收集特效
 
-整盒收齐点亮流动彩虹边框，联动系列使用专属 LOGO，勾选时有水波与角标动画。
-
-<p><img src="docs/screenshots/collection-effects.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/collection-effects.jpg" width="380"></td>
+<td valign="middle">整盒收齐点亮流动彩虹边框，联动系列使用专属 LOGO，勾选时有水波与角标动画。</td>
+</tr>
+</table>
 
 ### 进度彩蛋与特殊系列
 
-收集进度到特定数字会触发隐藏横幅；精英干员、周年礼盒等特殊系列单独成盒收录。
-
-<p><img src="docs/screenshots/progress-egg.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/progress-egg.jpg" width="380"></td>
+<td valign="middle">收集进度到特定数字会触发隐藏横幅；精英干员、周年礼盒等特殊系列单独成盒收录。</td>
+</tr>
+</table>
 
 ### 设置与关于
 
-主题切换、深浅模式、数据导入导出，以及完整的软件简介与更新日志。
-
-<p><img src="docs/screenshots/settings-about.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/settings-about.jpg" width="380"></td>
+<td valign="middle">主题切换、深浅模式、数据导入导出，以及完整的软件简介与更新日志。</td>
+</tr>
+</table>
 
 ### 数据来源
 
-干员字段（职业 / 星级 / 英文名 / 势力）与通行证分盒归类，来自逐条整理的源表：
-
-<p><img src="docs/screenshots/database.jpg" width="440"></p>
+<table>
+<tr>
+<td width="410"><img src="docs/screenshots/database.jpg" width="380"></td>
+<td valign="middle">干员字段（职业 / 星级 / 英文名 / 势力）与通行证分盒归类，来自逐条整理的源表。</td>
+</tr>
+</table>
 
 ## 技术栈
 
